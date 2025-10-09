@@ -29,7 +29,7 @@ export default function WhatWeDo() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
-          <div className="w-24 h-1 bg-emerald-700 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             We provide comprehensive organic solutions for conscious consumers who care about
             their health and the environment.
@@ -42,7 +42,7 @@ export default function WhatWeDo() {
               key={index}
               className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 text-center"
             >
-              <div className="flex justify-center mb-4 text-emerald-700">
+              <div className="flex justify-center mb-4 text-[#1A5235]">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>

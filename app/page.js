@@ -1,25 +1,23 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import AboutUs from '@/components/AboutUs';
-import WhatWeDo from '@/components/WhatWeDo';
-import Career from '@/components/Career';
-import Blogs from '@/components/Blogs';
-import ContactUs from '@/components/ContactUs';
-import Footer from '@/components/Footer';
+import Hero from '../components/Home/Hero';
+import AboutUs from '../components/Home/AboutUs';
+import WhatWeDo from '../components/Home/WhatWeDo';
+import Career from '../components/Home/Career';
+import Blogs from '../components/Home/Blogs';
+import Products from '../components/Home/Products';
+import CTABanner from '../components/Home/CTABanner';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
       <main>
         <Hero />
         <AboutUs />
         <WhatWeDo />
+        <Products />
         <Career />
         <Blogs />
-        <ContactUs />
+        <CTABanner />
       </main>
-      <Footer />
     </div>
   );
 }

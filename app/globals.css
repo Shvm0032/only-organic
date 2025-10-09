@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* app/globals.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,6 +18,12 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
 
 @layer base {
   :root {
@@ -80,3 +89,4 @@
     @apply bg-background text-foreground;
   }
 }
+

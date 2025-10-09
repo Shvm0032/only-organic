@@ -7,7 +7,6 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
 
@@ -15,7 +14,7 @@ export default function ContactUs() {
     e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   const handleChange = (e) => {
@@ -30,7 +29,7 @@ export default function ContactUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <div className="w-24 h-1 bg-emerald-700 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Have questions or want to learn more? We'd love to hear from you.
             Reach out and let's start a conversation.
@@ -43,7 +42,7 @@ export default function ContactUs() {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-emerald-100 rounded-lg">
-                  <Mail className="w-6 h-6 text-emerald-700" />
+                  <Mail className="w-6 h-6 text-[#1A5235]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Email</h4>
@@ -54,7 +53,7 @@ export default function ContactUs() {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-emerald-100 rounded-lg">
-                  <Phone className="w-6 h-6 text-emerald-700" />
+                  <Phone className="w-6 h-6 text-[#1A5235]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Phone</h4>
@@ -65,7 +64,7 @@ export default function ContactUs() {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-emerald-100 rounded-lg">
-                  <MapPin className="w-6 h-6 text-emerald-700" />
+                  <MapPin className="w-6 h-6 text-[#1A5235]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Address</h4>
@@ -110,21 +109,6 @@ export default function ContactUs() {
                 />
               </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="How can we help?"
-                />
-              </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -144,7 +128,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 bg-[#1A5235] text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2"
               >
                 <Send size={18} />
                 Send Message

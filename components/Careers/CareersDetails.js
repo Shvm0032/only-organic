@@ -1,6 +1,6 @@
 import { Briefcase, TrendingUp, Globe } from 'lucide-react';
 
-export default function Career() {
+export default function CareersDetails() {
   const positions = [
     {
       title: 'Product Manager',
@@ -45,7 +45,7 @@ export default function Career() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Career</h2>
-          <div className="w-24 h-1 bg-emerald-700 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Join our team and be part of a mission-driven company that is making a positive
             impact on people's health and the environment.
@@ -55,7 +55,7 @@ export default function Career() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {benefits.map((benefit, index) => (
             <div key={index} className="text-center p-6">
-              <div className="flex justify-center mb-4 text-emerald-700">
+              <div className="flex justify-center mb-4 text-[#1A5235]">
                 {benefit.icon}
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
@@ -78,7 +78,7 @@ export default function Career() {
                     {position.department} • {position.location} • {position.type}
                   </p>
                 </div>
-                <button className="px-6 py-2 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors whitespace-nowrap">
+                <button className="px-6 py-2 bg-[#1A5235] text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors whitespace-nowrap">
                   Apply Now
                 </button>
               </div>
