@@ -3,22 +3,13 @@ import { Calendar, User, ArrowRight } from "lucide-react";
 import { blogPosts } from "../../data/blogs";
 import Image from "next/image";
 
-export default function Blogs() {
-  // Sort blogPosts by date (assuming date is in "YYYY-MM-DD" or similar format)
-  const sortedBlogs = [...blogPosts].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-  );
-
-  // Take only the latest 3 blogs
-  const latestBlogs = sortedBlogs.slice(0, 3);
-
+export default function AllBlogs() {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Latest Blogs
+            Blogs
           </h2>
           <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -27,9 +18,8 @@ export default function Blogs() {
           </p>
         </div>
 
-        {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestBlogs.map((post) => (
+          {blogPosts.map((post) => (
             <article
               key={post.slug}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
@@ -37,11 +27,11 @@ export default function Blogs() {
               {/* Image */}
               <div className="relative h-48 w-full">
                 <Image
-                  src={post.image}
+                  src={post.image}           // Make sure path is correct (e.g., /images/blogs/...)
                   alt={post.title}
-                  fill
+                  fill                        // fill the parent div
                   className="object-cover rounded-t-lg"
-                  priority
+                  priority                   // optional, for important images
                 />
               </div>
 
@@ -80,16 +70,6 @@ export default function Blogs() {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* Show All Blogs Button */}
-        <div className="text-center mt-12">
-          <Link
-            href="/blogs"
-            className="inline-block bg-[#1A5235] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#248754] transition-all shadow-md hover:shadow-lg"
-          >
-            Show All Blogs
-          </Link>
         </div>
       </div>
     </section>

@@ -35,4 +35,16 @@ export const blogPosts = [
       "Full content for the third blog goes here.",
     image: "/Assets/home-slider/slider-1.jpg",
   },
+  {
+    title: "How to Start Your Organic Journey",
+    slug: "how-to-start-your-organic-journey",
+    excerpt:
+      "A comprehensive guide for beginners looking to transition to an organic lifestyle step by step.",
+    author: "Emily Rodriguez",
+    date: "Sep 28, 2025",
+    category: "Lifestyle",
+    content:
+      "Full content for the third blog goes here.",
+    image: "/Assets/home-slider/slider-1.jpg",
+  },
 ];

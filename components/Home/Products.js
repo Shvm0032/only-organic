@@ -1,9 +1,10 @@
-'use client';
-
+"use client";
+import { products } from "../../data/products";
+import Link from "next/link";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // ya aap font-awesome bhi use kar sakte ho
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom Next Arrow
 const NextArrow = ({ onClick }) => (
@@ -26,14 +27,6 @@ const PrevArrow = ({ onClick }) => (
 );
 
 export default function CardSliderSection() {
-  const cards = [
-    { id: 1, title: "Organic Honey", description: "Pure raw honey sourced from natural farms with care and dedication.", image: "/Assets/home-slider/slider-1.jpg" },
-    { id: 2, title: "Almonds", description: "High-quality almonds grown organically without pesticides or chemicals.", image: "/Assets/home-slider/slider-2.jpg" },
-    { id: 3, title: "Green Tea", description: "Refreshing green tea leaves harvested from pristine gardens worldwide.", image: "/Assets/home-slider/slider-3.jpg" },
-    { id: 4, title: "Olive Oil", description: "Extra virgin olive oil cold-pressed from the finest olives.", image: "/Assets/home-slider/slider-2.jpg" },
-    { id: 5, title: "Herbal Soap", description: "Natural herbal soaps made with organic ingredients for healthy skin.", image: "/Assets/home-slider/slider-3.jpg" },
-  ];
-
   const settings = {
     infinite: true,
     speed: 500,
@@ -58,27 +51,50 @@ export default function CardSliderSection() {
   return (
     <section className="py-12 bg-gray-100 relative">
       <div className="max-w-6xl mx-auto px-4">
-        
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Our Products</h2>
-          <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-8"></div>
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
+          Our Products
+        </h2>
+        <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-8"></div>
+
+        {/* Slider */}
         <Slider {...settings}>
-          {cards.map((card) => (
-            <div key={card.id} className="px-3">
+          {products.map((product) => (
+            <div key={product.id} className="px-3">
               <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
-                <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-4 flex flex-col justify-between flex-1">
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                    <p className="text-gray-600 mb-4">{truncateDescription(card.description)}</p>
+                    <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
+                    <p className="text-gray-600 mb-4">
+                      {truncateDescription(product.description)}
+                    </p>
                   </div>
-                  <button className="mt-auto bg-[#248754] hover:bg-[#1A5235] text-white font-semibold py-2 px-4 rounded transition-colors">
-                    Read More
-                  </button>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="mt-auto bg-[#248754] hover:bg-[#1A5235] text-white font-semibold py-2 px-4 rounded transition-colors text-center block"
+                  >
+                    View Details
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
+
+        {/* Show All Products Button */}
+        <div className="text-center mt-10">
+          <Link
+            href="/products"
+            className="inline-block bg-[#248754] hover:bg-[#1A5235] text-white font-semibold py-3 px-8 rounded-full transition-transform transform hover:scale-95 duration-200"
+          >
+            Show All Products
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -1,16 +1,12 @@
-import Header from '@/components/Header';
-import ContactUs from '../../components/Contact/ContactUs';
-import Footer from '@/components/Footer';
 
+import Blogs from '../../components/Blogs/AllBlogs';
 
-export default function Blogs() {
+export default function Blog() {
   return (
     <div className="min-h-screen">
-      <Header />
-      <main>
-        <ContactUs />
+      <main> 
+        <Blogs />
       </main>
-      <Footer />
     </div>
   );
 }
