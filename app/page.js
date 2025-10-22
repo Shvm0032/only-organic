@@ -5,6 +5,7 @@ import Career from '../components/Home/Career';
 import Blogs from '../components/Home/Blogs';
 import Products from '../components/Home/Products';
 import CTABanner from '../components/Home/CTABanner';
+import Reviews from '../components/Home/Reviews';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Products />
         <Career />
         <Blogs />
+        <Reviews/>
         <CTABanner />
       </main>
     </div>

@@ -27,6 +27,7 @@ export default function WhatWeDo() {
   return (
     <section id="what-we-do" className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Heading */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
           <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-6"></div>
@@ -36,17 +37,27 @@ export default function WhatWeDo() {
           </p>
         </div>
 
+        {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 text-center"
+              className="bg-white p-6 rounded-lg shadow-md border border-[#1A5235] text-center transition-all hover:-translate-y-1 hover:bg-[#1A5235] hover:shadow-xl group"
             >
-              <div className="flex justify-center mb-4 text-[#1A5235]">
+              {/* Icon */}
+              <div className="flex justify-center mb-4 text-[#1A5235] group-hover:text-white transition-colors">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-white transition-colors">
+                {service.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 group-hover:text-white transition-colors">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

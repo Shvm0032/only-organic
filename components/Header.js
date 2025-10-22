@@ -10,8 +10,6 @@ import {
   Twitter,
   Menu,
   X,
-  Heart,
-  ShoppingBag,
 } from "lucide-react";
 
 export default function Header() {
@@ -27,10 +25,11 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white shadow-md sticky top-0 z-50">
-      <div className="bg-[#1A5235] text-white">
+      {/* Top bar (hidden on mobile) */}
+      <div className="hidden md:block bg-[#1A5235] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center py-2 text-sm">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mb-2 sm:mb-0">
+          <div className="flex justify-between items-center py-2 text-sm">
+            <div className="flex items-center gap-6">
               <a
                 href="mailto:info@onlyorganic.com"
                 className="flex items-center gap-2 hover:text-emerald-100 transition-colors"
@@ -85,7 +84,8 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Main Header */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between w-full relative">
           {/* Logo Left */}
           <div className="flex-shrink-0">
@@ -93,13 +93,14 @@ export default function Header() {
               <Image
                 src="/Assets/logos/logo-main.png"
                 alt="Only Organic"
-                width={320}
+                width={220}
                 height={50}
+                className="object-contain"
               />
             </a>
           </div>
 
-          {/* Menu Center */}
+          {/* Menu Center (Desktop) */}
           <nav className="hidden lg:flex flex-1 justify-center items-center gap-8">
             {menuItems.map((item) => (
               <a
@@ -113,23 +114,17 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Side Icons / Login */}
-          <div className="hidden lg:flex items-center gap-6">
+          {/* Right Side - Products Button */}
+          <div className="hidden lg:flex">
             <a
-              href="#"
-              className="text-gray-700 hover:text-[#1A5235] font-medium transition-colors"
+              href="/products"
+              className="bg-[#1A5235] text-white px-5 py-2 rounded-md font-medium hover:bg-[#15452C] transition-colors"
             >
-              Login
+              Products
             </a>
-            <button className="text-gray-700 hover:text-[#1A5235] transition-colors">
-              <Heart size={22} />
-            </button>
-            <button className="text-gray-700 hover:text-[#1A5235] transition-colors">
-              <ShoppingBag size={22} />
-            </button>
           </div>
 
-          {/* Mobile Toggle */}
+          {/* Mobile Menu Toggle */}
           <button
             className="lg:hidden text-gray-700 hover:text-[#1A5235] transition-colors ml-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -139,6 +134,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
@@ -152,6 +148,13 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
+            <a
+              href="/products"
+              className="bg-[#1A5235] text-white text-center py-2 rounded-md font-medium hover:bg-[#15452C] transition-all transform hover:scale-95 duration-200 ease-in-out"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Products
+            </a>
           </nav>
         </div>
       )}
