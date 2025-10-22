@@ -22,7 +22,7 @@ export default function Footer() {
           }}
         ></div>
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-white/80"></div>
 
         {/* Content */}
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -38,7 +38,7 @@ export default function Footer() {
                   className="object-contain cursor-pointer"
                 />
               </Link>
-              <p className="text-gray-200 mb-4 text-sm">
+              <p className="text-gray-800 mb-4 text-sm">
                 Your trusted partner for pure, natural, and sustainably sourced
                 organic products.
               </p>
@@ -47,7 +47,7 @@ export default function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white text-gray-300 transition-colors"
+                  className="hover:text-white text-gray-800 transition-colors"
                 >
                   <Facebook size={20} />
                 </a>
@@ -55,7 +55,7 @@ export default function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white text-gray-300 transition-colors"
+                  className="hover:text-white text-gray-800 transition-colors"
                 >
                   <Instagram size={20} />
                 </a>
@@ -63,7 +63,7 @@ export default function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white text-gray-300 transition-colors"
+                  className="hover:text-white text-gray-800 transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
@@ -71,7 +71,7 @@ export default function Footer() {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white text-gray-300 transition-colors"
+                  className="hover:text-white text-gray-800 transition-colors"
                 >
                   <Twitter size={20} />
                 </a>
@@ -80,14 +80,14 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">
+              <h4 className="text-lg font-semibold mb-4 text-gray-800">
                 Quick Links
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
                     href="#about"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     About Us
                   </a>
@@ -95,7 +95,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#what-we-do"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     What We Do
                   </a>
@@ -103,7 +103,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#career"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     Career
                   </a>
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#blogs"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     Blogs
                   </a>
@@ -121,12 +121,12 @@ export default function Footer() {
 
             {/* Support */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Support</h4>
+              <h4 className="text-lg font-semibold mb-4 text-black">Support</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
                     href="#contact"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     Contact Us
                   </a>
@@ -134,7 +134,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     FAQs
                   </a>
@@ -142,7 +142,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800  transition-colors"
                   >
                     Privacy Policy
                   </a>
@@ -150,7 +150,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-800 transition-colors"
                   >
                     Terms & Conditions
                   </a>
@@ -160,10 +160,10 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">
+              <h4 className="text-lg font-semibold mb-4 text-black">
                 Contact Info
               </h4>
-              <ul className="space-y-3 text-sm text-gray-300">
+              <ul className="space-y-3 text-sm text-gray-800">
                 <li className="flex items-center gap-2">
                   <Mail size={16} />
                   <span>info@onlyorganic.com</span>

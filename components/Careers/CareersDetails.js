@@ -46,7 +46,7 @@ export default function CareersDetails() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Career</h2>
           <div className="w-24 h-1 bg-[#1A5235] mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-black max-w-3xl mx-auto">
             Join our team and be part of a mission-driven company that is making a positive
             impact on people's health and the environment.
           </p>
